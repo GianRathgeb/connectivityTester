@@ -1,2 +1,2 @@
-# connectivityTester
-With this tool you can check your connectivity to a certain website or IP address
+# pythonModuleLearning
+In this Repository I'll upload my code from the learning of diffrent Python modules.
