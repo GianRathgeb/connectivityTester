@@ -9,5 +9,4 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 sql = "CREATE DATABASE pythontest"
-
 mycursor.execute(sql)
