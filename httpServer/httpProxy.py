@@ -14,6 +14,5 @@ class MyRequestHandler(BaseHTTPRequestHandler):
             self.wfile.write(res.raw.read())
 
 address = ("127.0.0.1", 8080)
-
 server = HTTPServer(address, MyRequestHandler)
 server.serve_forever()

@@ -6,7 +6,6 @@ mydb = mysql.connector.connect(
   password="python3.8"
 )
 
-
 mycursor = mydb.cursor()
 
 sql = "CREATE DATABASE pythontest"
