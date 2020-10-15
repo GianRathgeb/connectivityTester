@@ -50,8 +50,12 @@ else:
     print(f"Renamed output file to {outputFile}")
 
     PyInstaller.__main__.run([
-        '--distpath', strCompileDirPath, '--workpath', os.path.join(
-            strCompileDirPath, "compile"), outputPath
+        '--onefile',
+        '--distpath',
+        strCompileDirPath,
+        '--workpath',
+        os.path.join(strCompileDirPath, "compile"),
+        outputPath
     ])
     os.remove(f"{outputFile[0:-3]}.spec")
     shutil.rmtree(os.path.join(strCompileDirPath, "compile"))
