@@ -4,10 +4,15 @@ import os
 from packaging.version import Version
 import shutil
 
+# Import writeVersionfile.py
+import writeVersionFile as vf
+
 # Define variables (i.e. input path)
 strInputPath = "test.py"
+strProjectName = "Test Script"
 strBuildFilePath = "./build"
 strAuthor = "Gian Rathgeb"
+strVersionFile = "versionFile.txt"
 
 # Check if variables are defined
 if strInputPath == "":
@@ -18,6 +23,12 @@ elif strBuildFilePath == "":
     exit
 elif strAuthor == "":
     print("The author is not given")
+    exit
+elif strProjectName == "":
+    print("Project name not given")
+    exit
+elif strVersionFile == "":
+    print("Version file not given")
     exit
 
 # Check if the build file exists, if not generate it
@@ -70,8 +81,11 @@ else:
     os.rename(inputFile, outputPath)
     print(f"Renamed output file to {outputFile}")
 
+    # Write version file
+    vf.writeVersionFile(strVersionFile, tuple(arrNewVersion), strAuthor, strProjectName, strNewVersion)
     # Run Pyinstaller and compile script
     PyInstaller.__main__.run([
+        '--version-file=../%s' % strVersionFile,
         '--onefile',
         '--specpath',
         strCompileDirPath,
