@@ -27,3 +27,9 @@ I started this Repository to learn some new Python modules, so here is an overvi
   * OS
   * Packaging.Version
   * shutil
+* Corona Cases Desktop Notifications
+  * datetime
+  * date
+  * requests
+  * os
+  * plyer.notifiaction
