@@ -99,3 +99,5 @@ else:
     strSpecFile = f"{outputFile[0:-3]}.spec"
     os.remove(f"{os.path.join(strCompileDirPath, strSpecFile)}")
     shutil.rmtree(os.path.join(strCompileDirPath, "compile"))
+
+    print(f"Compiled script {strInputPath} to {outputPath}")
