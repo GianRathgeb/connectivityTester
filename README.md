@@ -33,3 +33,6 @@ I started this Repository to learn some new Python modules, so here is an overvi
   * requests
   * os
   * plyer.notifiaction
+* Youtube Download
+  * Paty
+  * youtube-dl
