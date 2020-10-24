@@ -15,7 +15,6 @@ I tried to write a connectivity checker for websites. It uses the ICMP 4 protoco
 
 
 ### I started this Repository to learn some new Python modules, so here is an overview about the modules I used:
-
 * HTTP Proxy:
   * HTTP.Server
 * MySQL Database:
